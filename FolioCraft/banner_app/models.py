@@ -7,6 +7,7 @@ class BannerAppModel(models.Model):
     user= models.OneToOneField(Account, on_delete=models.CASCADE,related_name='banner')
     moto_heading = models.TextField()
     pro_file_image = models.ImageField(upload_to='images/banners', blank=True)
+    github_profile_link=models.TextField(blank=True)
     linkedin_profile_link=models.TextField(blank=True)
     Skype_profile_link=models.TextField(blank=True)
     twitter_profile_link=models.TextField(blank=True)
