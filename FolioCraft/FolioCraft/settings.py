@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'about_me',
     'service_provide',
     'fact_implemented_app',
+    'testimonial',
+    'showcase',
     
 ]
 
