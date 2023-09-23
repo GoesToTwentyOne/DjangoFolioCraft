@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'banner_app',
     'about_me',
     'service_provide',
+    'fact_implemented_app',
     
 ]
 

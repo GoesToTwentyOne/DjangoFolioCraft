@@ -3,6 +3,7 @@ from banner_app.models import BannerAppModel
 from about_me.models import AboutMeModel,EducationModel,SkillsModel,ProblemSolvedModel
 from service_provide.models import ServiceAppModelPart
 from accounts.models import Account
+from fact_implemented_app.models import FactImplementation
 
 # Create your views here.
 def home(request):
@@ -13,5 +14,6 @@ def home(request):
     problem_solved=ProblemSolvedModel.objects.all()
     services=ServiceAppModelPart.objects.all() 
     account=get_object_or_404(Account)
-    return render(request,'home.html',context={'banner':banner,'about_me':about_me,'educations':educations,'skills':skills,'problems':problem_solved,'services':services,'account':account})
+    fact_implementations=get_object_or_404(FactImplementation)
+    return render(request,'home.html',context={'banner':banner,'about_me':about_me,'educations':educations,'skills':skills,'problems':problem_solved,'services':services,'account':account,'fact_implementations':fact_implementations})
 
