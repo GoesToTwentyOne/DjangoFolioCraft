@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'core',
     'accounts',
     'banner_app',
+    'about_me',
+    'service_provide',
+    
 ]
 
 MIDDLEWARE = [
@@ -122,11 +125,12 @@ USE_TZ = True
 STATIC_URL = 'static/'
 # print(BASE_DIR)
 STATICFILES_DIR =[
-    BASE_DIR /'core/static/'
+    BASE_DIR /'core/static'
 ]
+STATIC_ROOT= BASE_DIR /'core/static'
 # print(STATICFILES_DIR)
 
-MEDIA_ROOT=BASE_DIR / 'core/media/'
+MEDIA_ROOT=BASE_DIR / 'core/media'
 MEDIA_URL='media/'
 
 # Default primary key field type

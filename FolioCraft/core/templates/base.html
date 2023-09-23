@@ -6,7 +6,7 @@
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Kufa - Personal Portfolio HTML5 Template</title>
+        <title>nihadgo75 Portfolio</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -48,8 +48,10 @@
                         <div class="col-xl-12">
                             <div class="main-menu">
                                 <nav class="navbar navbar-expand-lg">
-                                    <a href="index.html" class="navbar-brand logo-sticky-none"><img src="{% static 'assets/img/logo/logo.png' %}" alt="Logo"></a>
-                                    <a href="index.html" class="navbar-brand s-logo-none"><img src="{% static 'assets/img/logo/s_logo.png' %}" alt="Logo"></a>
+                            
+                                    <a href="{% url 'home' %}" class="navbar-brand logo-sticky-none"><h1>nihadgo75</h1></a>
+                                    <a href="{% url 'home' %}" class="navbar-brand s-logo-none"><h1 style="color: green;">nihadgo75</h1></a>
+
                                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                                         data-target="#navbarNav">
                                         <span class="navbar-icon"></span>
@@ -74,47 +76,10 @@
                     </div>
                 </div>
             </div>
-            <!-- offcanvas-start -->
-            <div class="extra-info">
-                <div class="close-icon menu-close">
-                    <button>
-                        <i class="far fa-window-close"></i>
-                    </button>
-                </div>
-                <div class="logo-side mb-30">
-                    <a href="index-2.html">
-                        <img src="{% static 'assets/img/logo/logo.png' %}" alt="" />
-                    </a>
-                </div>
-                <div class="side-info mb-30">
-                    <div class="contact-list mb-30">
-                        <h4>Office Address</h4>
-                        <p>123/A, Miranda City Likaoli
-                            Prikano, Dope</p>
-                    </div>
-                    <div class="contact-list mb-30">
-                        <h4>Phone Number</h4>
-                        <p>+0989 7876 9865 9</p>
-                    </div>
-                    <div class="contact-list mb-30">
-                        <h4>Email Address</h4>
-                        <p>info@example.com</p>
-                    </div>
-                </div>
-                <div class="social-icon-right mt-20">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="offcanvas-overly"></div>
-            <!-- offcanvas-end -->
+
         </header>
         <!-- header-end -->
         {% block content %} {% endblock %}
-
-
 
         <!-- footer -->
          <footer>
@@ -123,7 +88,7 @@
                      <div class="row align-items-center">
                          <div class="col-12">
                              <div class="copyright-text text-center">
-                                 <p>Copyright© <span>Kufa</span> | All Rights Reserved</p>
+                                 <p>Copyright© <span>{{account.username}}</span> | All Rights Reserved</p>
                              </div>
                          </div>
                      </div>
